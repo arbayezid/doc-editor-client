@@ -1,9 +1,10 @@
+import Review from "../../Review/review";
 
 
 const Home = () => {
     return (
-        <div className="mt-10 text-center text-red-500">
-            <h1>Review Section........</h1>
+        <div className="mt-10">
+            <Review />
         </div>
     );
 };
