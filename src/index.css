@@ -6,4 +6,8 @@
 body{
     background-color:white !important;
 }
+.rounded-green {
+    border-radius: 9999px; /* Use a large value for a circular shape */
+    background-color: rgba(21, 183, 21, 0.489);
+  }
 
