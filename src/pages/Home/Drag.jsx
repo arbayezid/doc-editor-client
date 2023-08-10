@@ -25,10 +25,12 @@ const Drag = () => {
     return (
         <div
             style={{
+               
                 justifyContent: 'center',
                 alignItems: 'center',
                 display: 'flex',
-                height: '100vh'
+                height: '100vh',
+                
             }}
         >
             <Upload.Dragger action='http://localhost:5173/'>
