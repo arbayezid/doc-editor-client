@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body{
+    background-color:white !important;
+}
+.rounded-green {
+    border-radius: 9999px;
+    background-color: rgba(21, 183, 21, 0.489);
+  }
+
