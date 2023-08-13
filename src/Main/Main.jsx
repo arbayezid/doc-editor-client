@@ -1,5 +1,6 @@
+import Counter from "../pages/Counting doc/Counter";
+import Drag from "../pages/Drag&Drop/Drag";
 import Devs from "../pages/Home/Devs/Devs";
-import Drag from "../pages/Home/Drag";
 import EditSection from "../pages/Home/EditSection/EditSection";
 import FAQ from "../pages/Home/FAQ/FAQ";
 import Review from "../pages/Home/Review/Review";
@@ -11,6 +12,7 @@ const Main = () => {
     return (
         <div>
             <Drag></Drag>
+            <Counter></Counter>
             <EditSection></EditSection>
             <TemplateSection></TemplateSection>
             <Review></Review>
