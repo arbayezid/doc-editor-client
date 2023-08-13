@@ -28,31 +28,33 @@ const Navbar = () => {
           </ul>
           
         </div>
-        <a className="btn btn-ghost normal-case text-xl">Likho</a>
+        <img className="w-10 rounded-full" src="https://i.ibb.co/tJXTwtN/Devs-SQUAD.png" alt="" />
+        <a  className="btn btn-ghost normal-case text-xl">Likho</a>
+        
       </div>
       <div className="navbar-center hidden lg:flex ">
 
         <ul className="menu menu-horizontal px-1">
 
-        <li><Link>Home</Link></li>
-          <li> <Link>Template</Link></li>
+        <li><Link className=" font-normal">Home</Link></li>
+          <li> <Link className=" font-normal">Template</Link></li>
           <li tabIndex={0} >
             <details>
-              <summary>Convert</summary>
+              <summary className=" font-normal">Convert</summary>
               <ul className="p-2 bg-violet-200 w-32">
-              <li><a>Text to pdf</a></li>
-                <li><a>Word to pdf</a></li>
-                <li><a>Docs to pdf</a></li>
+              <li><a className=" font-normal">Text to pdf</a></li>
+                <li><a className=" font-normal">Word to pdf</a></li>
+                <li><a className=" font-normal">Docs to pdf</a></li>
               </ul>
             </details>
           </li>
-          <li><Link>Pricing</Link></li>
-          <li><Link>About</Link></li>
+          <li><Link className=" font-normal">Pricing</Link></li>
+          <li><Link className=" font-normal">About</Link></li>
         </ul>
         
       </div>
-      <div className="navbar-end ">
-        <Link className="btn btn-xs capitalize btn-outline ">Get Started</Link>
+      <div className="navbar-end ml-4 ">
+        <Link className="btn btn-xs capitalize btn-outline m-4 font-normal">Get Started</Link>
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
@@ -63,11 +65,11 @@ const Navbar = () => {
             <li>
               <a className="justify-between">
                 Profile
-                <span className="badge bg-violet-200 ">New</span>
+                <span className="badge bg-violet-200 font-normal ">New</span>
               </a>
             </li>
-            <li><a>Settings</a></li>
-            <li><a>Logout</a></li>
+            <li><a className="font-normal">Settings</a></li>
+            <li><a className="font-normal">Logout</a></li>
           </ul>
         </div>
 

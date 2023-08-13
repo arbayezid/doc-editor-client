@@ -1,0 +1,89 @@
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+   
+    text-align: center;
+    /* font-size: 18px; */
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    /* display: block; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-msg {
+    padding: 2rem 2rem;
+    /* background: var(--white);
+    border-radius: 1rem; */
+    text-align: left;
+    /* box-shadow: var(--shadow); */
+    position: relative;
+}
+/* forQuote */
+.left{
+    
+   padding-top: 10px;
+    position: absolute;
+    bottom: 5rem;
+    left: 12rem;
+    font-size: 2rem;
+    font-family: "Font Awesome 6 free";
+    color: #cde3ffe1;
+}
+
+/* .right{
+    
+    position: absolute;
+    top: 5rem;
+    right: 6rem;
+    font-size: 1rem;
+    font-family: "Font Awesome 6 free";
+    color: #cde3ff;
+} */
+.swiper-msg::before{
+    content: "";
+    position: absolute;
+    bottom: -10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    /* border: 5rem solid var(--white); */
+    border-color: transparent;
+    border-top-color: var(--helper-tint);
+}
+
+.swiper-slide img {
+    max-width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 0.5rem solid var(--helper-tint);
+}
+.swiper-data{
+    align-items: center; 
+    font-size: 10px;
+    
+}

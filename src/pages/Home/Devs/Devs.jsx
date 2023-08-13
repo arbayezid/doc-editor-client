@@ -64,6 +64,7 @@ export default function Devs() {
                         </div>
                     </div>
                 </SwiperSlide>
+                
                 <SwiperSlide>
                 <div className="container">
                         <div className="content">
