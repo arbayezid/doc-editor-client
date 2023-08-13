@@ -1,178 +1,61 @@
-
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
+import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import asish from './../assets/DevsImg/asish.jpg'
-import bayzid from './../assets/DevsImg/bayzid.jpg'
-import choyon from './../assets/DevsImg/choyon.jpg'
-import joy from './../assets/DevsImg/joydev.jpg'
-
-
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-import './styles.css';
-
-// import required modules
-import { Pagination,Autoplay,Navigation } from 'swiper/modules';
-import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import { Pagination, Autoplay, Navigation } from 'swiper/modules';
+import { FaQuoteLeft } from 'react-icons/fa';
+import './Developer.css'
 
 const Developer = () => {
+    const [devs, setDevs] = useState([])
 
+    useEffect(() => {
+        fetch('/developers.json')
+        .then(res => res.json())
+        .then(data => setDevs(data))
+    }, [])
 
     return (
-        < div className='px-12'>
+        <div className='px-12'>
             <h2 className='text-4xl text-center'>Developer</h2>
 
             <Swiper
-                slidesPerView={2}
+                slidesPerView={1}
                 spaceBetween={30}
-                
-                autoplay={{ delay: 2500}}
+                autoplay={{ delay: 11112500 }}
                 pagination={{
                     clickable: true,
                 }}
-                modules={[Pagination,Autoplay,Navigation]}
-                
-                className="mySwiper "
+                modules={[Pagination, Autoplay, Navigation]}
+                className="mySwiper"
+                breakpoints={{
+                    // When window width is >= 768px
+                    768: {
+                        slidesPerView: 2,
+                    }
+                }}
             >
-
-                
-                <SwiperSlide className='swiper-slide'>
-
-                    <div className='swiper-msg z-10 shadow-lg mb-6 '>
-
-                        <FaQuoteLeft className='left' ></FaQuoteLeft>
-                        <p>
-
-                            Mahejabin: Im in the way to be an independent women..Who loves to cherish her dream
-                        </p>
-                        {/* <FaQuoteRight className='right' ></FaQuoteRight> */}
-                    </div>
-                    <div className='grid grid-cols-2 swiper-data'>
-
-                        <figure>
-                            <img src="https://i.ibb.co/HDpbVRZ/mypic.jpg" alt="" />
-                        </figure>
-                        <div className='swiper-details '>
-                            <p >Mahejabin</p>
-                            <p className='text-gray-400' >Front-end developer</p>
+                {devs.map(dev => (
+                    <SwiperSlide key={dev.id} className='swiper-slide'>
+                        <div className='swiper-msg z-10 shadow-lg mb-6 p-6 h-[150px]'>
+                            <div>
+                                <FaQuoteLeft className=' mx-auto text-3xl mb-3' ></FaQuoteLeft>
+                            </div>
+                            <p className='text-center'>
+                                {dev?.description}
+                            </p>
                         </div>
-                    </div>
-
-
-                </SwiperSlide>
-
-
-                <SwiperSlide>
-                    <div className='swiper-msg z-10 shadow-lg mb-6'>
-
-                        <FaQuoteLeft className='left' ></FaQuoteLeft>
-                        <p>
-
-                        Himalay Bala Asish : Im in the way to be an independent men..Who loves to cherish her dream
-                        </p>
-                        {/* <FaQuoteRight className='right' ></FaQuoteRight> */}
-                    </div>
-                    <div className='grid grid-cols-2 swiper-data'>
-
-                        <figure>
-                            <img src={asish} alt="" />
-                        </figure>
-                        <div className='swiper-details '>
-                            <p >Himalay Bala Asish </p>
-                            <p className='text-gray-400' >Front-end developer</p>
+                        <div className='flex items-center justify-center gap-5 '>
+                            <div>
+                                <img className='devImg' src={dev?.image} alt={dev?.name} />
+                            </div>
+                            <div className='swiper-details '>
+                                <p >{dev?.name}</p>
+                                <p className='text-gray-400' >{dev?.title}</p>
+                            </div>
                         </div>
-                    </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <div className='swiper-msg z-10 shadow-lg mb-6'>
-
-                        <FaQuoteLeft className='left' ></FaQuoteLeft>
-                        <p className=''>
-
-                        Bayzid Rahman: Im in the way to be an independent men..Who loves to cherish her dream
-                        </p>
-                        {/* <FaQuoteRight className='right' ></FaQuoteRight> */}
-                    </div>
-                    <div className='grid grid-cols-2 swiper-data'>
-
-                        <figure>
-                            <img src={bayzid} alt="" />
-                        </figure>
-                        <div className='swiper-details '>
-                            <p>Bayzid Rahman</p>
-                            <p className='text-gray-400' >Front-end developer</p>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='swiper-msg z-10 shadow-lg mb-6'>
-
-                        <FaQuoteLeft className='left' ></FaQuoteLeft>
-                        <p className=''>
-
-                        Choyon Adhikari: Im in the way to be an independent men..Who loves to cherish her dream
-                        </p>
-                        {/* <FaQuoteRight className='right' ></FaQuoteRight> */}
-                    </div>
-                    <div className='grid grid-cols-2 swiper-data'>
-
-                        <figure>
-                            <img src={choyon} alt="" />
-                        </figure>
-                        <div className='swiper-details '>
-                            <p >Choyon Adhikari</p>
-                            <p className='text-gray-400' >Front-end developer</p>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='swiper-msg z-10 shadow-lg mb-6'>
-
-                        <FaQuoteLeft className='left' ></FaQuoteLeft>
-                        <p className=''>
-
-                        Joy Shutradhar: Im in the way to be an independent men..Who loves to cherish her dream
-                        </p>
-                        {/* <FaQuoteRight className='right' ></FaQuoteRight> */}
-                    </div>
-                    <div className='grid grid-cols-2 swiper-data'>
-
-                        <figure>
-                            <img src={joy} alt="" />
-                        </figure>
-                        <div className='swiper-details '>
-                            <p >Joy Shutradhar</p>
-                            <p className='text-gray-400' >Front-end developer</p>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='swiper-msg z-10 shadow-lg mb-6'>
-
-                        <FaQuoteLeft className='left' ></FaQuoteLeft>
-                        <p className=''>
-
-                        Ataullah mesbah: Im in the way to be an independent men..Who loves to cherish her dream
-                        </p>
-                        {/* <FaQuoteRight className='right' ></FaQuoteRight> */}
-                    </div>
-                    <div className='grid grid-cols-2 swiper-data'>
-
-                        <figure>
-                            <img src="https://i.ibb.co/DfvxzCq/anjum.jpg" alt="" />
-                        </figure>
-                        <div className='swiper-details '>
-                            <p >Ataullah mesbah</p>
-                            <p className='text-gray-400' >Front-end developer</p>
-                        </div>
-                    </div>
-                </SwiperSlide>
-
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </div>
     );
