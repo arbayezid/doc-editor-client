@@ -17,7 +17,8 @@ const Footer = () => {
                 <a className="link link-hover">Overview</a>
                 <a className="link link-hover">Tech</a>
                 <a className="link link-hover">Government</a>
-                <a className="link link-hover">Non-Profits</a>
+                <a className="link link-hover">Non-Profits
+                </a>
                 <a className="link link-hover">Financial Services</a>
             </div>
             <div>
