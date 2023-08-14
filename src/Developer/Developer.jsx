@@ -8,6 +8,7 @@ import './Developer.css'
 
 const Developer = () => {
     const [devs, setDevs] = useState([])
+    const [typingStatus, setTypingStatus] = useState('Initializing');
 
     useEffect(() => {
         fetch('/developers.json')
@@ -16,13 +17,13 @@ const Developer = () => {
     }, [])
 
     return (
-        <div className='px-12'>
-            <h2 className='text-4xl text-center'>Developer</h2>
+        <div className='px-12 mt-8'>
+            <h2 className='text-4xl text-center'>Meet all the developer</h2>
 
             <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
-                autoplay={{ delay: 11112500 }}
+                autoplay={{ delay: 2500 }}
                 pagination={{
                     clickable: true,
                 }}
@@ -37,7 +38,7 @@ const Developer = () => {
             >
                 {devs.map(dev => (
                     <SwiperSlide key={dev.id} className='swiper-slide'>
-                        <div className='swiper-msg z-10 shadow-lg mb-6 p-6 h-[150px]'>
+                        <div className='swiper-msg z-10 shadow-lg mb-6 p-6 h-[120px]'>
                             <div>
                                 <FaQuoteLeft className=' mx-auto text-3xl mb-3' ></FaQuoteLeft>
                             </div>
