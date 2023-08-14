@@ -35,7 +35,7 @@ const ReadSection = () => {
                 <div className='hover:text-gray-600 bg-white p-10 rounded-lg shadow-md transform hover:scale-105 transition duration-300 ease-in-out'>
                     <FaFileAlt size={40}></FaFileAlt>
                     <h3 className='text-2xl mt-4 font-bold'>Merge File Here</h3>
-                    <p>Merge your document here with a pre-made template and add your functionality with your choice without any hassle.</p>
+                    <p>Merge your documents here with a pre-made template and add your functionality with your choice without any hassle.</p>
                 </div>
             </div>
         </div>
