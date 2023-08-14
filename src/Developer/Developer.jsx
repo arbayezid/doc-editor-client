@@ -2,7 +2,7 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import asish from './../assets/DevsImg/asish.jpg'
+import asish from './../assets/DevsImg/asish.png'
 import bayzid from './../assets/DevsImg/bayzid.jpg'
 import choyon from './../assets/DevsImg/choyon.jpg'
 import joy from './../assets/DevsImg/joydev.jpg'
@@ -82,7 +82,7 @@ const Developer = () => {
                             <img src={asish} alt="" />
                         </figure>
                         <div className='swiper-details '>
-                            <p >Himalay Bala Asish </p>
+                            <p >Himalay Bala Ashis </p>
                             <p className='text-gray-400' >Front-end developer</p>
                         </div>
                     </div>
