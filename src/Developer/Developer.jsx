@@ -8,7 +8,7 @@ import './Developer.css'
 
 const Developer = () => {
     const [devs, setDevs] = useState([])
-    const [typingStatus, setTypingStatus] = useState('Initializing');
+    
 
     useEffect(() => {
         fetch('/developers.json')
@@ -17,8 +17,8 @@ const Developer = () => {
     }, [])
 
     return (
-        <div className='px-12 mt-8'>
-            <h2 className='text-4xl text-center'>Meet all the developer</h2>
+        <div className='px-12 mt-14'>
+            <h2 className='text-4xl font-bold text-center mb-12'>Meet all the developer</h2>
 
             <Swiper
                 slidesPerView={1}
