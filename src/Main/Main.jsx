@@ -20,13 +20,8 @@ const Main = () => {
             <Counter></Counter>
             <EditSection></EditSection>
             <TemplateSection></TemplateSection>
-<<<<<<< HEAD
-            <Developer></Developer>
-            
-=======
             <MarqueeSection></MarqueeSection>
             <ReadSection></ReadSection>
->>>>>>> 594abe3a3a51c9dd125e5ec13e70e5aab898c565
             <Review></Review>
             <FAQ></FAQ>
             <Devs></Devs>
