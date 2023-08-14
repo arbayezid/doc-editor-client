@@ -24,7 +24,7 @@ const Main = () => {
             
             <Review></Review>
             <FAQ></FAQ>
-            <Devs></Devs>
+            
         </div>
     );
 };
