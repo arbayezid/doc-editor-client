@@ -1,3 +1,6 @@
+
+
+import Developer from "../Developer/Developer";
 import Counter from "../pages/Counting doc/Counter";
 import Drag from "../pages/Drag&Drop/Drag";
 import Devs from "../pages/Home/Devs/Devs";
@@ -17,8 +20,8 @@ const Main = () => {
             <Counter></Counter>
             <EditSection></EditSection>
             <TemplateSection></TemplateSection>
-            <MarqueeSection></MarqueeSection>
-            <ReadSection></ReadSection>
+            <Developer></Developer>
+            
             <Review></Review>
             <FAQ></FAQ>
             <Devs></Devs>

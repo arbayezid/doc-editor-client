@@ -1,13 +1,14 @@
 
 import './App.css'
+import RoundedLetter from './Navbar/RoundedLetter'
 
 function App() {
   
 
   return (
-    <div>
+    <div className="flex justify-center items-center h-screen">
       
-      <h1>Vite + React</h1>
+      <RoundedLetter />
       
     </div>
   )

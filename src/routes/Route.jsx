@@ -17,7 +17,9 @@ const router = createBrowserRouter([
         {
           path:"/navbar",
           element:<Navbar></Navbar>
-        }
+        },
+        
+        
       ]
     },
   ]);
